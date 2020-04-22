@@ -9,10 +9,10 @@ class App extends React.Component{
         this.handleClick = this.handleClick.bind(this) //bind method handleClick to the class App
     }
     handleClick() {
-        this.setState(prevState =>                  //function prevState within function handleClick
+        this.setState(prevState =>  {                //function prevState within function handleClick
             return {
                 count: prevState.count +1           //new count property
-            }
+        }})
                                 
     }
 
