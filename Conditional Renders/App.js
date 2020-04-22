@@ -5,12 +5,12 @@ class App extends Component{
     constructor(){
         super()
         this.state = {
-            isLoading: true
+            isLoading: true                 //during call to an API
         }
     }
 
     componentDidMount(){
-        setTimeout(() => {
+        setTimeout(() => {                  //faking a call to an API
             this.setState({
                 isLoading: false
             })
@@ -21,7 +21,7 @@ class App extends Component{
     render(){
         return (
             <div>
-                <Conditional isLoading={this.state.isLoading}/>
+                <Conditional isLoading={this.state.isLoading}/> //importing the Conditional component
             </div>
         )
     }   
