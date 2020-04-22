@@ -2,10 +2,11 @@ import React, {Component} from 'react'
 import Conditional from './Conditional'
 
 class App extends Component{
-    constructor(){
+    constructor(){                         // in order to set states its needs to be a class component                    
         super()
         this.state = {
-            isLoading: true                 //during call to an API
+            isLoading: true                 //in rder to to keepo track is an actions is taking place, 
+                                            //it needs to have a state during call to an API
         }
     }
 
@@ -17,7 +18,8 @@ class App extends Component{
         },1500)
     }
 
-
+                                             // to add a button that loges te user in/out 
+                                            // an event listener (onClick)           
     render(){
         return (
             <div>
