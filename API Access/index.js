@@ -1,18 +1,6 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
-class App extends Component {
-    constructor(){
-        super()
-        this.state={}
-    }
-    render(){
-        return(
-            <div>
-                Code goes here
-            </div>
-        )
-    }
+import App from './App'
 
-}
-export default App
-
+ReactDOM.render(<App />,document.getElementById('root'))
