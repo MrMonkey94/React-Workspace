@@ -21,7 +21,7 @@ handleChange(event){
 
     render(){
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <input 
                 type="text" 
                 value={this.state.firstName}
@@ -53,6 +53,7 @@ handleChange(event){
                 /> Is friendly?
                 </label>
                 <br/>
+
                 <label>
                 <input 
                 type="radio"
@@ -63,6 +64,7 @@ handleChange(event){
                 /> Male
                 </label>
                 <br/>
+
                 <label>
                 <input 
                 type="radio"
@@ -73,6 +75,21 @@ handleChange(event){
                 /> Female
                 </label>
 
+                <label>Favorite Color:</label>
+                    <select 
+                    value={this.state.favColor}
+                    onChange={this.handleChange}
+                    name="favColor"
+                    >
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                    </select>
+                    <h1>{this.state.firstName}{this.state.lastName}</h1>
+                    <h2>You are a {this.state.gender}</h2>
+                    <button>Submit</button>
             </form>
         )
     }
